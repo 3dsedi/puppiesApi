@@ -8,15 +8,15 @@ const puppy_1 = require("./models/puppy");
 const bodyParser = require('body-parser');
 const PUPPIES = [
     { id: 123, breed: 'husky', name: 'snow man', birthDate: '21.09.1986' },
-    { id: 124, breed: 'sarabi', name: 'SAG', birthDate: '21.09.1983' },
-    { id: 125, breed: 'golden retriever', name: 'goldi', birthDate: '21.09.1983' },
-    { id: 126, breed: 'french bulldog', name: 'martin', birthDate: '21.09.1983' },
-    { id: 127, breed: 'beagle', name: 'peggy', birthDate: '21.09.1983' },
-    { id: 128, breed: 'poodle', name: 'teddy', birthDate: '21.09.1983' },
-    { id: 129, breed: 'golden retriever', name: 'golden hair', birthDate: '21.09.1983' },
-    { id: 130, breed: 'german shepherd', name: 'rex', birthDate: '21.09.1983' },
-    { id: 131, breed: 'afghan hound', name: 'nikol', birthDate: '21.09.1983' },
-    { id: 132, breed: 'german shepherd', name: 'nina', birthDate: '21.09.1983' },
+    { id: 124, breed: 'sarabi', name: 'SAG', birthDate: '12.08.2015' },
+    { id: 125, breed: 'golden retriever', name: 'goldi', birthDate: '29.11.2020' },
+    { id: 126, breed: 'french bulldog', name: 'martin', birthDate: '27.08.2021' },
+    { id: 127, breed: 'beagle', name: 'peggy', birthDate: '14.10.2010' },
+    { id: 128, breed: 'poodle', name: 'teddy', birthDate: '21.01.2014' },
+    { id: 129, breed: 'golden retriever', name: 'golden hair', birthDate: '25.02.2016' },
+    { id: 130, breed: 'german shepherd', name: 'rex', birthDate: '15.07.2018' },
+    { id: 131, breed: 'afghan hound', name: 'nikol', birthDate: '02.04.2021' },
+    { id: 132, breed: 'german shepherd', name: 'nina', birthDate: '08.11.2019' },
 ];
 const app = (0, express_1.default)();
 app.use(bodyParser.json());
@@ -59,7 +59,7 @@ app.delete('/api/puppies/:id', (_req, res) => {
         throw new Error('puppy not found');
     }
     PUPPIES.splice(puppyIndex, 1);
-    res.status(200).json({ message: ' puppy deleted' });
+    res.status(202).json({ message: ' puppy deleted' });
 });
 exports.default = app;
 //# sourceMappingURL=app.js.map
